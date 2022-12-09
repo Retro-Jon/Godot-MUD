@@ -1,0 +1,71 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Entity",
+"class": "Client",
+"language": "GDScript",
+"path": "res://Client/Client.gd"
+}, {
+"base": "Entity",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://Mob/Mob.gd"
+}, {
+"base": "Node",
+"class": "Entity",
+"language": "GDScript",
+"path": "res://Global/Entity.gd"
+}, {
+"base": "Node",
+"class": "Item",
+"language": "GDScript",
+"path": "res://Global/Item.gd"
+}, {
+"base": "Node",
+"class": "MUD",
+"language": "GDScript",
+"path": "res://MUD/MUD.gd"
+}, {
+"base": "Node",
+"class": "Spell",
+"language": "GDScript",
+"path": "res://Global/Spell.gd"
+} ]
+_global_script_class_icons={
+"Client": "",
+"Enemy": "",
+"Entity": "",
+"Item": "",
+"MUD": "",
+"Spell": ""
+}
+
+[application]
+
+config/name="Mud"
+run/main_scene="res://MUD/MUD.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+Data="*res://Global/Data.gd"
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+environment/default_environment="res://default_env.tres"
